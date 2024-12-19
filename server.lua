@@ -31,7 +31,11 @@ end)
 
 RegisterNetEvent('bag_weight_modifier:updateWeight', function(weight)
     local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
     exports.ox_inventory:SetMaxWeight(src, weight)
+    if Player then
+        Player.Functions.SetPlayerData('metadata.maxweight', weight)
+    end
 end)
 
 CreateThread(function()
