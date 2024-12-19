@@ -1,0 +1,16 @@
+BagDrawables = {
+    [40] = "Canvas Duffelbag Empty",
+    [41] = "Canvas Duffelbag Full",
+    [44] = "Black Duffel Bag Empty",
+    [45] = "Black Duffel Bag Full",
+    [81] = "Deep Black Duffel Bag Empty",
+    [82] = "Deep Black Duffel Bag Full",
+    [85] = "Leopard Print Duffel Bag Empty",
+    [86] = "Leopard Print Duffel Bag Full",
+    [156] = "Black Canvas Bag Small",
+    [159] = "Cat Backpack",
+    [160] = "Pokemon Backpack Small",
+    [161] = "Green Verde Backpack Small",
+    [162] = "Pokemon Backpack Large",
+    [163] = "LV Chest Bag",
+}
