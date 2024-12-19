@@ -42,9 +42,6 @@ RegisterNetEvent('bag_weight_modifier:updateWeight', function(weight)
     if Player then
         Player.Functions.SetPlayerData('metadata.maxweight', weight)
         Player.Functions.UpdatePlayerData()
-        -- Verify the new weight
-        local newWeight = Player.PlayerData.metadata.maxweight
-        print('Updated player weight: ' .. newWeight)
     end
     local xPlayer = QBCore.Functions.GetPlayer(src)
     if xPlayer then
