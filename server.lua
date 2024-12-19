@@ -45,7 +45,6 @@ RegisterNetEvent('bag_weight_modifier:updateWeight', function(weight)
     end
     local xPlayer = QBCore.Functions.GetPlayer(src)
     if xPlayer then
-        xPlayer.Functions.GetPlayer(src)
         xPlayer.Functions.SetMetaData('maxweight', weight)
     end
 end)
