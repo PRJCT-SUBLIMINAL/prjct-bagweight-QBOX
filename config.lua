@@ -1,7 +1,7 @@
 Config = {}
 
 -- Debug mode (true for verbose output in console)
-Config.Debug = false
+Config.Debug = true
 
 -- List of bags and their respective weight increases
 Config.Bags = {

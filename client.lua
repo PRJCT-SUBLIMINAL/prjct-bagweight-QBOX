@@ -33,7 +33,7 @@ local function UpdateWeight()
     if newBagWeight ~= currentBagWeight then
         currentBagWeight = newBagWeight
         local totalWeight = Config.DefaultWeight + currentBagWeight
-        TriggerServerEvent('bag_weight_modifier:updateWeight', totalWeight)
+        exports.ox_inventory:setMaxWeight(totalWeight)
         DebugPrint("Weight updated to: " .. totalWeight)
     end
 end
@@ -72,9 +72,9 @@ AddEventHandler('QBCore:Client:OnPlayerSpawn', function()
     UpdateWeight()
 end)
 
-RegisterNetEvent('bag_weight_modifier:loadBagStatus')
-AddEventHandler('bag_weight_modifier:loadBagStatus', function(bagId)
-    if bagId then
-        UpdateWeight()
-    end
-end)
+-- Debug command to check current weight
+RegisterCommand('checkweight', function()
+    local currentWeight = exports.ox_inventory:getCurrentWeight()
+    local maxWeight = exports.ox_inventory:getMaxWeight()
+    print(string.format('Current Weight: %s / %s', currentWeight, maxWeight))
+end, false)
